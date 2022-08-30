@@ -1,3 +1,5 @@
+package HomeTaskThree;
+
 public class Animal {
 	String name;
 
@@ -7,7 +9,7 @@ public class Animal {
 
 	@Override
 	public String toString() {
-		return "Animal{" +
+		return "HomeTaskThree.Animal{" +
 				"name='" + name + '\'' +
 				'}';
 	}

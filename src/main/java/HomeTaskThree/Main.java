@@ -1,3 +1,5 @@
+package HomeTaskThree;
+
 import java.util.LinkedList;
 
 public class Main {
@@ -32,13 +34,13 @@ public class Main {
 		Exception in thread "main" java.util.ConcurrentModificationException
 	at java.base/java.util.LinkedList$ListItr.checkForComodification(LinkedList.java:970)
 	at java.base/java.util.LinkedList$ListItr.next(LinkedList.java:892)
-	at Main.main(Main.java:38)
+	at HomeTaskThree.Main.main(HomeTaskThree.Main.java:38)
 		 */
 
-//		ListIterator<Animal> iteratorAnimal = linkedListAnimal.listIterator();
+//		ListIterator<HomeTaskThree.Animal> iteratorAnimal = linkedListAnimal.listIterator();
 //
-//		for (ListIterator<Animal> it = iteratorAnimal; it.hasNext();) {
-//			Animal animal = it.next();
+//		for (ListIterator<HomeTaskThree.Animal> it = iteratorAnimal; it.hasNext();) {
+//			HomeTaskThree.Animal animal = it.next();
 //			if (animal.name.substring(0, 1).matches("[AaEeUuIiOoYy]")) {
 //				linkedListAnimal.remove(animal);
 //			}
