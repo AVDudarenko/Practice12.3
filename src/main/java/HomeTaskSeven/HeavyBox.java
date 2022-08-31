@@ -4,13 +4,22 @@ import java.util.ArrayList;
 
 public class HeavyBox {
 
+	ArrayList<Integer> hugeBox = new ArrayList<>();
+
 	int weight;
 
 	public HeavyBox(int weight) {
 		this.weight = weight;
 	}
 
+	public HeavyBox() {
+
+	}
+
 	public static void main(String[] args) {
+
+		HeavyBox heavyBoxObject = new HeavyBox();
+
 		ArrayList<HeavyBox> arrayOfHeavyBox = new ArrayList<>();
 		HeavyBox heavyBoxOne = new HeavyBox(0);
 		HeavyBox heavyBoxTwo = new HeavyBox(2);
@@ -23,6 +32,22 @@ public class HeavyBox {
 		arrayOfHeavyBox.add(heavyBoxThree);
 		arrayOfHeavyBox.add(heavyBoxFour);
 		arrayOfHeavyBox.add(heavyBoxFive);
+
+		ArrayList<HeavyBox> boxesForSort = new ArrayList<>();
+		HeavyBox boxForSortOne = new HeavyBox(100);
+		HeavyBox boxForSortTwo = new HeavyBox(350);
+		HeavyBox boxForSortThree = new HeavyBox(300);
+		HeavyBox boxForSortFour = new HeavyBox(200);
+		HeavyBox boxForSortFive = new HeavyBox(500);
+
+		boxesForSort.add(boxForSortOne);
+		boxesForSort.add(boxForSortTwo);
+		boxesForSort.add(boxForSortThree);
+		boxesForSort.add(boxForSortFour);
+		boxesForSort.add(boxForSortFive);
+
+		heavyBoxObject.sortBoxesByWeight(boxesForSort);
+
 
 		System.out.println("Print all elements: ");
 		for (HeavyBox heavyBox : arrayOfHeavyBox) {
@@ -58,6 +83,20 @@ public class HeavyBox {
 			System.out.println(box.weight);
 		}
 
+	}
+
+	private void sortBoxesByWeight(ArrayList<HeavyBox> boxes) {
+		int counter = 0;
+		for (HeavyBox box : boxes) {
+			if (box.weight > 300) {
+				hugeBox.add(counter, box.weight);
+				counter++;
+			}
+		}
+		System.out.println("Sorted boxes by weight:");
+		for (Integer weight : hugeBox) {
+			System.out.println(weight);
+		}
 	}
 
 }

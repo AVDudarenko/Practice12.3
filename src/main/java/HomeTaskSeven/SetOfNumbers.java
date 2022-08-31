@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class SetOfNumbers {
 
 	public static void main(String[] args) {
+
 		String lineOfNumbers;
 		Scanner scanner = new Scanner(System.in);
 		lineOfNumbers = scanner.nextLine();
