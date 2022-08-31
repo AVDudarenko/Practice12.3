@@ -29,13 +29,19 @@ public class Student {
 
 	static ArrayList<Student> listOfStudents = new ArrayList<>();
 
-	public static void main(String[] args) {
-		addStudents();
-		deleteStudentWithLowGrade(listOfStudents);
-		printStudents(listOfStudents, 2);
+	public Student() {
+
 	}
 
-	private static void addStudents() {
+	public static void main(String[] args) {
+
+		Student student = new Student();
+		student.addStudents();
+		student.deleteStudentWithLowGrade(listOfStudents);
+		student.printStudents(listOfStudents, 2);
+	}
+
+	private void addStudents() {
 		Student one = new Student("Sasha", "1", 1, 5, 4, 5);
 		Student two = new Student("Petya", "1", 1, 5, 4, 5);
 		Student three = new Student("Ivan", "2", 2, 1, 5, 1);
@@ -49,17 +55,17 @@ public class Student {
 		listOfStudents.add(five);
 	}
 
-	private static void deleteStudentWithLowGrade(List<Student> student) {
+	private void deleteStudentWithLowGrade(List<Student> student) {
 
-		for (Student studentForCheck : student) {
-			int averageGradeOfStudent = (studentForCheck.historyGrade + studentForCheck.javaGrade + studentForCheck.maths)/3;
+		for (int i = 0; i < student.size(); i++) {
+			int averageGradeOfStudent = (student.get(i).historyGrade + student.get(i).javaGrade + student.get(i).maths) / 3;
 			if (averageGradeOfStudent < 3) {
-				listOfStudents.remove(studentForCheck);
+				listOfStudents.remove(student.get(i));
 			}
 		}
 	}
 
-	private static void printStudents(List<Student> students, int course) {
+	private void printStudents(List<Student> students, int course) {
 
 		for (Student studentForCheck : students) {
 			if (studentForCheck.course == course) {
