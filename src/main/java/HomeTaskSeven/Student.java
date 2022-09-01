@@ -34,7 +34,6 @@ public class Student {
 	}
 
 	public static void main(String[] args) {
-
 		Student student = new Student();
 		student.addStudents();
 		student.deleteStudentWithLowGrade(listOfStudents);
