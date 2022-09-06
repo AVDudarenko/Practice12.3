@@ -2,7 +2,7 @@ package HomeTaskSix;
 
 import java.util.TreeSet;
 
-public class TreeSetTask {
+public class 	TreeSetTask {
 
 	public static void main(String[] args) {
 
